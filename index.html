@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espaço Beleza</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:#171717;background:#f7f7f7}button,input,select{font:inherit}button{cursor:pointer}.topo{min-height:78px;padding:12px 7%;display:flex;align-items:center;justify-content:space-between;background:#0d0d0d;color:#fff;position:sticky;top:0;z-index:10;flex-wrap:wrap;gap:10px}.marca{font-size:25px;font-weight:700;letter-spacing:1px}.menu{display:flex;align-items:center;gap:6px;flex-wrap:wrap;overflow-x:auto}.menu button{border:0;background:transparent;color:#fff;padding:11px 14px;border-radius:7px;white-space:nowrap}.menu button:hover{background:#292929}.usuario{font-size:14px;color:#ddd;display:flex;align-items:center;gap:10px}.usuario button{background:#292929}.pag{display:none;min-height:calc(100vh - 78px)}.pag.on{display:block}.hero{min-height:620px;padding:90px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#050505 0%,#171717 60%,#343434 100%);color:#fff}.hero-conteudo{max-width:650px}.tag{display:inline-block;padding:8px 13px;border:1px solid #777;border-radius:20px;font-size:13px;letter-spacing:1px}.hero h1{font-size:64px;line-height:1.05;margin:24px 0 18px}.hero p{font-size:19px;line-height:1.7;color:#d4d4d4;max-width:580px}.btn-principal{margin-top:22px;padding:15px 24px;border:1px solid #eee;border-radius:7px;background:#fff;color:#111;font-weight:700}.btn-principal:hover{background:#ddd}.btn-escuro{padding:15px 24px;border:0;border-radius:7px;background:#111;color:#fff;font-weight:700}.btn-escuro:hover{background:#000}.secao{padding:70px 8%}.secao h2{text-align:center;font-size:36px;margin:0 0 12px}.subtitulo{text-align:center;color:#666;margin-bottom:38px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;padding:30px;border:1px solid #e0e0e0;border-radius:12px;box-shadow:0 8px 25px #0000000b}.card-numero{font-size:35px;font-weight:700;color:#bdbdbd}.card h3{font-size:22px;margin:18px 0 10px}.card p{color:#666;line-height:1.6}.card-preco{margin-top:16px;font-weight:700;color:#111;font-size:18px}.card-preco .original{font-weight:400;color:#999;text-decoration:line-through;margin-right:8px;font-size:14px}.chamada{padding:65px 8%;text-align:center;background:#151515;color:#fff}.chamada h2{font-size:38px;margin:0 0 12px}.chamada p{color:#ccc}.rodape{padding:28px;text-align:center;background:#070707;color:#aaa}.form-area{max-width:920px;margin:50px auto;padding:0 20px}.painel{background:#fff;border:1px solid #ddd;border-radius:12px;padding:30px;box-shadow:0 10px 30px #0000000c}.painel h2{margin-top:0}.painel h3{margin-top:0}.grid-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-form.alinhar-topo{align-items:start}.campo{display:flex;flex-direction:column;gap:7px}.campo input,.campo select{padding:13px;border:1px solid #ccc;border-radius:7px}.servicos{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.servicos label{padding:13px;border:1px solid #ddd;border-radius:7px;background:#fafafa}.cal-topo{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:15px}.cal-topo button{border:0;background:#111;color:#fff;border-radius:5px;padding:7px 12px}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:18px}.cal-grid div{padding:12px 5px;border:1px solid #ddd;text-align:center;border-radius:5px}.cal-grid .dia{cursor:pointer}.cal-grid .dia:hover{background:#eee}.cal-grid .off{background:#eee;color:#aaa;cursor:default}.cal-grid .sel{background:#111;color:#fff}.msg{margin-top:14px;font-weight:700}.msg.ok{color:#16813b}.msg.err{color:#b42318}.pagamento-opcoes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}.pagamento-opcoes label{padding:18px;border:1px solid #ddd;border-radius:8px}.resumo{padding:18px;background:#f3f3f3;border-radius:8px;line-height:1.8}.confirmacao{text-align:center;padding:70px 20px}.confirmacao .icone{font-size:70px}.confirmacao h2{font-size:35px}.item-agendamento{background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.item-agendamento .info p{margin:3px 0;color:#444}.status-tag{display:inline-block;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700}.status-pago{background:#e6f4ea;color:#16813b}.status-pendente{background:#fdecea;color:#b42318}.aviso-central{text-align:center;padding:40px 20px;color:#666}#ov-login{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:30;padding:20px}#ov-login.on{display:flex}.modal{background:#fff;padding:30px;border-radius:12px;width:100%;max-width:380px;position:relative}.modal h2{margin-top:0}.modal input{width:100%;padding:13px;margin-bottom:11px;border:1px solid #ccc;border-radius:7px}.modal button{width:100%;padding:12px;border:0;border-radius:7px;background:#111;color:#fff;margin-top:5px}.modal .secundario{background:#eee;color:#111}.fechar{position:absolute;right:15px;top:12px;font-size:24px;cursor:pointer}@media(max-width:780px){.hero h1{font-size:43px}.cards,.grid-form,.pagamento-opcoes{grid-template-columns:1fr}.servicos{grid-template-columns:1fr}.topo{padding:12px 4%}.hero{padding:70px 7%}.item-agendamento{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header class="topo">
+    <div class="marca">ESPAÇO BELEZA</div>
+    <nav class="menu">
+        <button onclick="ir('home')">Início</button>
+        <button onclick="ir('quemsomos')">Quem somos</button>
+        <button onclick="document.getElementById('servicos-home').scrollIntoView(); ir('home')">Serviços</button>
+        <button onclick="ir('profissionais')">Profissionais</button>
+        <button onclick="ir('promocoes')">Promoções</button>
+        <button onclick="ir('agendamento')">Agendar</button>
+        <span id="area-restrita"></span>
+        <span id="area-usuario"></span>
+    </nav>
+</header>
+
+<main id="pag-home" class="pag on">
+    <section class="hero">
+        <div class="hero-conteudo">
+            <span class="tag">BELEZA • CUIDADO • BEM-ESTAR</span>
+            <h1>Realce sua beleza, renove sua confiança.</h1>
+            <p>Um espaço criado para cuidar de você com atendimento profissional, conforto e serviços de qualidade.</p>
+            <button class="btn-principal" onclick="ir('agendamento')">Agendar horário</button>
+        </div>
+    </section>
+
+    <section id="servicos-home" class="secao">
+        <h2>Nossos serviços</h2>
+        <p class="subtitulo">Escolha o cuidado que combina com você.</p>
+        <div class="cards">
+            <article class="card"><div class="card-numero">01</div><h3>Cabelo</h3><p>Cortes, escova, hidratação e tratamentos para valorizar seu estilo.</p></article>
+            <article class="card"><div class="card-numero">02</div><h3>Unhas</h3><p>Manicure e pedicure com cuidado, higiene e acabamento impecável.</p></article>
+            <article class="card"><div class="card-numero">03</div><h3>Estética</h3><p>Sobrancelha, limpeza de pele e massagens para seu bem-estar.</p></article>
+        </div>
+    </section>
+
+    <section class="chamada">
+        <h2>Seu momento começa aqui.</h2>
+        <p>Escolha uma data, selecione seus serviços e faça seu agendamento.</p>
+        <button class="btn-principal" onclick="ir('agendamento')">Agendar agora</button>
+    </section>
+    <footer class="rodape">© 2026 Espaço Beleza</footer>
+</main>
+
+<section id="pag-quemsomos" class="pag">
+    <div class="secao">
+        <h2>Quem somos</h2>
+        <p class="subtitulo">Um espaço pensado para o seu cuidado</p>
+        <div class="grid-form alinhar-topo">
+            <div class="painel">
+                <h3>Sobre nós</h3>
+                <p>O Espaço Beleza nasceu da ideia de oferecer um atendimento próximo, cuidadoso e acessível. Aqui, cada visita é pensada para que você saia se sentindo melhor do que chegou, com serviços de cabelo, unhas e estética feitos por uma equipe que gosta do que faz.</p>
+            </div>
+            <div class="painel">
+                <h3>Nossa história</h3>
+                <p>Começamos pequenos, com poucos serviços e uma agenda simples. Com o tempo, fomos ampliando o cardápio de cuidados e organizando tudo em um sistema próprio de agendamento, para que marcar um horário seja tão tranquilo quanto o próprio atendimento.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pag-profissionais" class="pag">
+    <div class="secao">
+        <h2>Nossos profissionais</h2>
+        <p class="subtitulo">Quem cuida de cada serviço do nosso cardápio</p>
+        <div id="lista-profissionais" class="cards"></div>
+    </div>
+</section>
+
+<section id="pag-promocoes" class="pag">
+    <div class="secao">
+        <h2>Promoções</h2>
+        <p class="subtitulo">Combine serviços e pague menos</p>
+        <div id="lista-promocoes" class="cards"></div>
+        <div style="text-align:center;margin-top:30px">
+            <button class="btn-escuro" onclick="ir('agendamento')">Agendar uma promoção</button>
+        </div>
+    </div>
+</section>
+
+<section id="pag-agendamento" class="pag">
+    <div class="form-area">
+        <div class="painel">
+            <h2>Agende seu horário</h2>
+            <p>Selecione o dia, horário e os serviços desejados.</p>
+            <div id="cal"></div>
+            <div class="grid-form">
+                <div class="campo"><label>Data escolhida</label><input id="data-sel" readonly placeholder="Selecione no calendário"></div>
+                <div class="campo"><label>Horário</label><input id="hora" type="time"></div>
+                <div class="campo"><label>Nome</label><input id="nome-c" placeholder="Seu nome"></div>
+                <div class="campo"><label>E-mail</label><input id="email-c" placeholder="Seu e-mail"></div>
+            </div>
+            <h3>Serviços</h3>
+            <div id="checks" class="servicos">
+                <label><input type="checkbox" value="Corte - R$ 60"> Corte — R$ 60</label>
+                <label><input type="checkbox" value="Manicure - R$ 54"> Manicure — R$ 54</label>
+                <label><input type="checkbox" value="Sobrancelha - R$ 45"> Sobrancelha — R$ 45</label>
+                <label><input type="checkbox" value="Limpeza de pele - R$ 150"> Limpeza de pele — R$ 150</label>
+            </div>
+            <h3>Promoções (opcional)</h3>
+            <p class="subtitulo" style="margin-bottom:12px;text-align:left">Se preferir, marque um pacote promocional em vez dos serviços avulsos.</p>
+            <div id="checks-promo" class="servicos"></div>
+            <button class="btn-principal" style="background:#111;color:#fff" onclick="agendar()">Continuar</button>
+            <div id="msg-agd" class="msg"></div>
+        </div>
+    </div>
+</section>
+
+<section id="pag-pagamento" class="pag">
+    <div class="form-area">
+        <div class="painel">
+            <h2>Pagamento</h2>
+            <div id="resumo-pagamento" class="resumo"></div>
+            <div class="pagamento-opcoes">
+                <label><input type="radio" name="metodo" value="Pix" checked> Pix</label>
+                <label><input type="radio" name="metodo" value="Cartão"> Cartão</label>
+            </div>
+            <button class="btn-principal" style="background:#111;color:#fff" onclick="pagar()">Confirmar pagamento</button>
+            <div id="msg-pag" class="msg"></div>
+        </div>
+    </div>
+</section>
+
+<section id="pag-conf" class="pag">
+    <div class="confirmacao">
+        <div class="icone">✓</div>
+        <h2>Agendamento confirmado!</h2>
+        <p id="txt-conf"></p>
+        <p id="txt-email-conf" class="subtitulo" style="margin-top:0"></p>
+        <button class="btn-principal" onclick="ir('home')">Voltar ao início</button>
+    </div>
+</section>
+
+<section id="pag-meus-agendamentos" class="pag">
+    <div class="form-area">
+        <div class="painel">
+            <h2>Meus agendamentos</h2>
+            <div id="lista-agendamentos"></div>
+        </div>
+    </div>
+</section>
+
+<div id="ov-login">
+    <div id="t-login" class="modal">
+        <span class="fechar" onclick="fecharLogin()">×</span>
+        <h2>Entrar</h2>
+        <input id="l-email" type="email" placeholder="E-mail">
+        <input id="l-senha" type="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <div id="msg-l" class="msg"></div>
+        <button class="secundario" onclick="mostrarRegistro()">Criar conta</button>
+    </div>
+
+    <div id="t-reg" class="modal" style="display:none">
+        <span class="fechar" onclick="fecharLogin()">×</span>
+        <h2>Criar conta</h2>
+        <input id="r-nome" placeholder="Nome">
+        <input id="r-email" type="email" placeholder="E-mail">
+        <input id="r-senha" type="password" placeholder="Senha">
+        <button onclick="registro()">Cadastrar</button>
+        <div id="msg-r" class="msg"></div>
+        <button class="secundario" onclick="mostrarLogin()">Já tenho conta</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
